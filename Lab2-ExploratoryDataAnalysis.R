@@ -260,7 +260,7 @@ summary(PimaIndiansDiabetes)
 
 # Low variability is ideal because it means that you can better predict
 # information about the population based on sample data. High variability means
-# that the values are less consistent, thus making it harder to make
+# that the values are less consistent, thus making it harder to make 
 # predictions.
 
 # The format “dataset[rows, columns]” can be used to specify the exact rows and
