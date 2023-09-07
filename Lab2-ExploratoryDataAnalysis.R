@@ -24,7 +24,7 @@
 
 # Further reading:
 #   Summary: https://rstudio.github.io/renv/
-#   More detailed article: https://rstudio.github.io/renv/articles/renv.html
+#   More detailed article: https://rstudio.github.io/renv/articles/renv.html 
 
 # Install renv:
 if (!is.element("renv", installed.packages()[, 1])) {
