@@ -506,12 +506,12 @@ summary(crop_dataset_interactive_two_way_anova)
 # fertilizer and the density (P<0.001 for both independent variables).
 # The interactive two-way ANOVA also shows that the crop yield is affected by
 # both the fertilizer and the density (P<0.001 for both independent variables).
-# However, the “fertilizer:density” variable has a high p-value (p=0.532500)
+# However, the fertilizer:density variable has a high p-value (p=0.532500)
 # which implies that there is not much variation in the dependent variable
 # (final crop yield) that can be explained by the interaction between the
 # independent variables (fertilizer and density).
 
-# An ANOVA can also be performed on the variable called “block”. The “block”
+# An ANOVA can also be performed on the variable called block. The block
 # variable specifies the planting location in the field (blocks 1, 2, 3, or 4).
 # Different blocks can have different control measures enforced to reduce the
 # influence of confounding variables, e.g., temperature, water, soil quality,
@@ -519,7 +519,7 @@ summary(crop_dataset_interactive_two_way_anova)
 # change in the dependent variable is correlated with the independent variable
 # and not other variables that are not part of the research.
 
-# Execute the following to add the “block” variable:
+# Execute the following to add the block variable:
 crop_dataset_interactive_two_way_anova_with_block <- aov(yield ~ # nolint
                                                            fertilizer + density
                                                            + block,
@@ -531,7 +531,7 @@ summary(crop_dataset_interactive_two_way_anova_with_block)
 # fertilizer and the density (P<0.001 for both independent variables). However,
 # the block variable has a high p-value (p=0.488329) which implies that there
 # is not much variation in the dependent variable (final crop yield) that can
-# be explained by the “block” variable (the different blocks used to plant the
+# be explained by the block variable (the different blocks used to plant the
 # crops).
 
 # Qualitative Data Analysis ----
@@ -573,7 +573,7 @@ summary(crop_dataset_interactive_two_way_anova_with_block)
 # Histograms help in determining whether an attribute has a Gaussian
 # distribution. They can also be used to identify the presence of outliers.
 
-# Execute the following code to create histograms for the “BostonHousing”
+# Execute the following code to create histograms for the BostonHousing
 # dataset:
 par(mfrow = c(1, 3))
 for (i in 1:3) {
@@ -591,8 +591,8 @@ hist(BostonHousing[, 13], main = names(BostonHousing)[13])
 hist(BostonHousing[, 14], main = names(BostonHousing)[14])
 
 # Execute the following code to create one histogram for attribute 4 (the only
-# numeric column was “final crop yield (in bushels per acre)”) in the
-# “crop_dataset” dataset:
+# numeric column was final crop yield (in bushels per acre)) in the
+# crop_dataset dataset:
 # The code below converts column number 4 into unlisted and numeric data first
 # so that a histogram can be plotted. Further reading:
 # https://www.programmingr.com/r-error-messages/x-must-be-numeric-error-in-r-histogram/ ) # nolint
@@ -600,7 +600,7 @@ crop_dataset_yield <- as.numeric(unlist(crop_dataset[, 4]))
 hist(crop_dataset_yield, main = names(crop_dataset)[4])
 
 # Execute the following code to create histograms for attribute 1 to 4 of the
-# “iris_dataset” dataset:
+# iris_dataset dataset:
 par(mfrow = c(1, 4))
 for (i in 1:4) {
   hist(iris_dataset[, i], main = names(iris_dataset)[i])
@@ -619,9 +619,9 @@ for (i in 1:8) {
 # Further reading: https://www.scribbr.com/statistics/interquartile-range/
 
 # Execute the following code to create box and whisker plots for the
-# “BostonHousing” dataset:
+# BostonHousing dataset:
 # This considers the first 3 attributes which are numeric. The fourth attribute
-# in the dataset is of the type “factor”, i.e., categorical.
+# in the dataset is of the type factor, i.e., categorical.
 
 par(mfrow = c(1, 3))
 for (i in 1:3) {
@@ -651,7 +651,7 @@ crop_dataset_yield <- as.numeric(unlist(crop_dataset[, 4]))
 boxplot(crop_dataset_yield, main = names(crop_dataset)[4])
 
 # Execute the following code to create box and whisker plots for attribute
-# 1 to 4 of the “iris_dataset” dataset:
+# 1 to 4 of the iris_dataset dataset:
 par(mfrow = c(1, 4))
 for (i in 1:4) {
   boxplot(iris_dataset[, i], main = names(iris_dataset)[i])
